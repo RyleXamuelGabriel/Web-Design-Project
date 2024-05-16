@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Hair Haven Products</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        main {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .product {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            width: 30%;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+        .product h3 {
+            color: #333;
+        }
+        .product p {
+            color: #666;
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .product button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .product button:hover {
+            background-color: #555;
+        }
+        #cart {
+            text-align: center;
+            margin-top: 20px;
+        }
+ nav {
+            background-color: #444;
+            color: #fff;
+            text-align: center;
+            padding: 5px 0;
+            margin-top: 10px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hair Haven Products</h1>
+    </header>
+<nav>
+        <a href="HomePage.HTML">Home</a> | 
+        <a href="FeaturedProducts.HTML">Featured Products</a> | 
+        <a href="AboutPage.HTML">About</a>
+    <main>
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1566854630-61j5kwqcb7l-sl1500-1566854622.jpg?crop=1xw:1xh;center,top&resize=980:*" alt="Product 1">
+            <h3>ColorProof SuperPlump Thickening Blow Dry Spray</h3>
+            <p>Get an instant lift and noticeable volume with ColorProof's featherweight, fast-acting mist, the winner of the GH Beauty Lab's hair volumizing sprays test. Hair was “immediately bigger, fuller and thicker” and “looked the best it ever has,” two testers said. 100% of users agreed that the spray didn’t weigh down hair or make it feel crunchy, and it scored on top for ease of styling.</p>
+            <p>Price: $44</p>
+            <button onclick="addToCart(44)">Add to Cart</button>
+        </div>
+        
+        <!-- Add more product entries below -->
+        <!-- Repeat the structure for each product -->
+        
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1643143431-1566854108-guest-d803bf13-c607-4e8a-974c-8e2e1e66a23e-1566854089.jpg?crop=1xw:1xh;center,top&resize=980:*" alt="Product 2">
+            <h3>Garnier Fructis Full and Plush Shampoo and Conditioner</h3>
+            <p>Get bigger, bouncier hair with this Garnier pair, which tied for best in the Beauty Lab’s volumizing shampoo and conditioner test. “My hair felt fuller after just one use," a tester raved. In Lab evaluations, these came in highest for noticeably upping hair’s volume.</p>
+            <p>Price: $14</p>
+            <button onclick="addToCart(14)">Add to Cart</button>
+        </div>
+        
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1566585034-11275423-9544396449654738.jpg?crop=1xw:1xh;center,top&resize=980:*" alt="Product 3">
+            <h3>Joico Moisture Co-Wash Whipped Cleansing Conditioner</h3>
+            <p>A sulfate-free 2-in-1 shampoo and conditioner with a higher ratio of conditioning ingredients, Joico's cleansing conditioner was a winner of the GH Beauty Lab's cleansing conditioners and co-washes test for giving parched, damaged hair a nourishing cleanse. “My hair is noticeably softer and healthier-looking than with my regular formulas," a tester said. In Lab testing, it rated highest for making hair feel stronger and look smoother and less frizzy.</p>
+            <p>Price: $22</p>
+            <button onclick="addToCart(22)">Add to Cart</button>
+        </div>
+
+ <!-- Product 4 -->
+        <div class="product">
+            <img src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1642100899-11KIA_Womens_Essentials_GoodHousekeeping_2048x.png?crop=1xw:1.00xh;center,top&resize=980:*" alt="Product 4">
+            <h3>KeepItAnchored Essentials Kit for Women</h3>
+            <p>A GH Beauty Award winner for its breakthrough technology, this KeepItAnchored shampoo and scalp serum set helps maintain hair’s fullness by improving the scalp’s condition with ingredients like niacinamide, zinc and caffeine. In a clinical study on the technology, users of it had about 2,400 more hairs on their scalp after six months than those who used a placebo, according to GH Beauty Lab data analysis.</p>
+            <p>Price: $54</p>
+            <button onclick="addToCart(50)">Add to Cart</button>
+        </div>
+ <!-- Product 5 -->
+        <div class="product">
+            <img src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1643141549-1642093800-71stpfb7vbl-sl1500-1642093783.jpg?crop=1xw:1xh;center,top&resize=980:*" alt="Product 5">
+            <h3>Garnier Fructis Style Smooth Blow Dry Anti-Frizz Cream</h3>
+            <p>This argan oil-infused Garnier Fructis cream, a winner of the Beauty Lab's test of smoothing styling products, effectively fends off frizz and makes strands sleek. The formula earned high marks with testers for daylong frizz defense and for immediately smoothing hair with no oily or sticky effects. “It rained for almost a solid week, and I didn’t have a problem with frizz,” a user revealed. “I love the texture it left my hair with — smooth and bouncy,” another said.</p>
+            <p>Price: $18</p>
+            <button onclick="addToCart(18)">Add to Cart</button>
+        </div>
+ <!-- Product 6 -->
+        <div class="product">
+            <img src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1642101870-31TlhIsZfnL._SL500_.jpg?crop=1xw:1.00xh;center,top&resize=980:*" alt="Product 6">
+            <h3>Biolage Advanced Keratindose Pro-Keratin Renewal Spray</h3>
+            <p>Double up on hydration by applying this GH Beauty Lab test-winning Biolage protein-infused spray moisturizer on damp hair. In Lab testing, it came out on top for its conditioning ability and for making damaged hair samples feel smooth.</p>
+            <p>Price: $23</p>
+            <button onclick="addToCart(23)">Add to Cart</button>
+        </div>
+ <!-- Product 7 -->
+        <div class="product">
+            <img src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1643140926-51b3walAo2L._SL500_.jpg?crop=1xw:1.00xh;center,top&resize=980:*" alt="Product 7">
+            <h3>Herbal Essences BioRenew Hydrate Coconut Milk Shampoo and Conditioner</h3>
+            <p>Herbal Essences’ products, made with coconut extract and aloe, boasted the highest level of conditioning in the GH Beauty Lab’s test of hydrating shampoos and conditioners for dry hair, with this pair performing best in a test with the Lab’s Instron machine which gauges combing force through wet hair, proving strong conditioning benefits. Consumer testers loved these infusions, too: “My dry hair was much more moisturized,” one tester marveled.</p>
+            <p>Price: $36</p>
+            <button onclick="addToCart(36)">Add to Cart</button>
+        </div>
+ <!-- Product 8 -->
+        <div class="product">
+            <img src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1643143325-41iitTTGuIL._SL500_.jpg?crop=1xw:1.00xh;center,top&resize=980:*" alt="Product 8">
+            <h3>TRESemmé Keratin Smooth Color Shampoo and Conditioner</h3>
+            <p>The Tresemmé duo tops the Beauty Lab’s test of hair color-preserving shampoos and conditioners. Post-use, hair sample color faded least after 20 washes and 10 hours of UV exposure in Lab testing. One tester marveled that they were "like expensive salon products.”</p>
+            <p>Price: $25</p>
+            <button onclick="addToCart(25)">Add to Cart</button>
+        </div>
+ <!-- Product 9 -->
+        <div class="product">
+            <img src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1642103434-screen-shot-2022-01-13-at-2-50-02-pm-1642103414.png?crop=1xw:0.9722222222222222xh;center,top&resize=980:*" alt="Product 9">
+            <h3>Kristin Ess Instant Lift Thickening Spray</h3>
+            <p>Inject lasting body and fullness into fine or flat hair by misting this GH Beauty Lab thickening spray test winner from hairstylist Kristin Ess. 91% of users agreed that it made hair look instantly voluminous, and it was tops for thickening. “Fantastic volume that lasted two days!” a tester raved.</p>
+            <p>Price: $14</p>
+            <button onclick="addToCart(14)">Add to Cart</button>
+        </div>
+ <!-- Product 10 -->
+        <div class="product">
+            <img src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1617909457-ed93680f-7f2b-4f4e-ba76-0c14b9b168ec.8dc0434af528e0f24db731a31d3b038a.jpg?crop=1xw:1.00xh;center,top&resize=980:*" alt="Product 10">
+            <h3>Pantene Gold Series Hair Repair Combing Creme</h3>
+            <p>Formulated specially for textured hair, this GH Beauty Award-winning Pantene lightweight hair moisture cream with amino acids effortlessly untangles knots to protect fragile strands from breakage. “No yanking as I brushed, and I could even use it on dry hair without residue or heaviness,” a tester said.</p>
+            <p>Price: $15</p>
+            <button onclick="addToCart(15)">Add to Cart</button>
+        </div>
+ <!-- Product 11 -->
+        <div class="product">
+            <img src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1566582779-31PunUu2BvTL.jpg?crop=1xw:1.00xh;center,top&resize=980:*" alt="Product 11">
+            <h3>Pantene Pro-V Sheer Volume Foam Conditioner</h3>
+            <p>Perfect for the conditioner-averse, Pantene’s first-ever foam version feels as airy as a cloud, making strands supple and bouncy. The formula conditioned well in GH Beauty Lab testing and 95% of users reported that the formula didn’t weigh hair down. "It worked wonders for my fine, limp hair — it had more body,” a tester said.</p>
+            <p>Price: $35</p>
+            <button onclick="addToCart(35)">Add to Cart</button>
+        </div>
+ <!-- Product 12 -->
+        <div class="product">
+            <img src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1642101651-screen-shot-2022-01-13-at-2-20-09-pm-1642101630.png?crop=1.00xw:0.908xh;0,0.0387xh&resize=980:*" alt="Product 12">
+            <h3>Kérastase Discipline Anti Frizz Smoothing Spray</h3>
+            <pGreat for anyone averse to heavier styling products, Kérastase, a winner of the GH Beauty Lab’s anti-frizz styling products test, provides potent frizz-fighting power in a lightweight liquid spray. The mist stopped frizz on testers for a full day and on hair swatches in the Lab humidity chamber, and it didn’t feel tacky on hair. “This single bottle worked better than the three-product combination I was using,” a tester said. “It smoothed out my frizz and broken ends without leaving any film or crunch behind.” More than half of users raved about its “pretty” floral scent.</p>
+            <p>Price: $42</p>
+            <button onclick="addToCart(42)">Add to Cart</button>
+        </div>
+ <!-- Product 13 -->
+        <div class="product">
+            <img src="https://tristarboutique.com/cdn/shop/products/43447012777423.jpg?v=1626421282&width=1445" alt="Product 13">
+            <h3>The Flex Brush</h3>
+            <p>This inventive hair tool, a GH Beauty Breakthrough Award winner, has a bendy head that hugs head contours for less tugging. It earned rare near-perfect score in Beauty Lab testing for gently detangling wet or dry hair of all textures. “By far the best brush I’ve ever used on myself or my clients,” a pro stylist tester raved.</p>
+            <p>Price: $19</p>
+            <button onclick="addToCart(19)">Add to Cart</button>
+        </div>
+ <!-- Product 14 -->
+        <div class="product">
+            <img src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1633554442-41hNzPETGmS._SL500_.jpg?crop=0.996xw:1xh;center,top&resize=980:*" alt="Product 14">
+            <h3>K18 Leave-In Molecular Repair Hair Mask</h3>
+            <p>K18’s science-backed peptide hair treatment effectively strengthens chemically damaged hair, earning it a GH Beauty Breakthrough Award. GH Beauty Lab pros were impressed by performance data showing that the leave-in formula restored 82% of the strength of overbleached hair samples with two uses.</p>
+            <p>Price: $23</p>
+            <button onclick="addToCart(23)">Add to Cart</button>
+        </div>
+ <!-- Product 15 -->
+        <div class="product">
+            <img src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1643143508-71107Ska5CL._SL1500_.jpg?crop=1xw:1.00xh;center,top&resize=980:*" alt="Product 15">
+            <h3>DOVE HAIR Nutritive Solutions Daily Moisture Shampoo</h3>
+            <p>This light, refreshing Dove shampoo (used with the matching conditioner) was by far the tester favorite in the GH Beauty Lab’s test of hydrating shampoos and conditioners, with 100% stating that they would continue using it. “The effects were wondrous,” a fan raved. “My hair was fantastic — brushable, silky and flowing.” In Lab evaluations, the formulas rated best for leaving hair clean and easy to style.</p>
+            <p>Price: $10</p>
+            <button onclick="addToCart(10)">Add to Cart</button>
+        </div>
+
+        
+    </main>
+    <div id="cart">
+        <h2>Cart Total: $<span id="total">0</span></h2>
+<button onclick="confirmPurchase()">Confirm Purchase</button>
+    </div>
+
+    <script>
+        let total = 0;
+
+        function addToCart(price) {
+            total += price;
+            document.getElementById('total').innerText = total;
+        }
+function confirmPurchase() {
+    alert('Thank you for your purchase! Your total amount is $' + total + '.');
+    window.location.href = 'ThankYouForYourPurchase.HTML'; 
+}
+    </script>
+</body>
+</html>
